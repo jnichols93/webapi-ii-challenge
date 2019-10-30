@@ -1,18 +1,11 @@
-console.log("COME GET YO DATA!")
-//sanity check valid
+const express = require("express");
+const postRouter = require("./posts/postRouter");
+const commentRouter = require("./comments/commentsRouter");
 
-const express = require('express')
-const db = require('./data/db')
-const postRouter = require('./posts/post-router.js/index.js')
-//imports^
+const server = express();
+server.use(express.json());
 
-const server = express()
-const port  = 3000
-server.listen(port, () => console.log('posts running on 3000'))
-server.use(express.json())
-server.use('/api/posts', postRouter)
-//server definition ^
+server.use("/api/posts", postRouter);
+server.use("/api/posts", commentRouter);
 
-server.get('/', (req, res) => {
-    res.send('Post Data Retrieval')
-})
+server.listen(8000, () => console.log("API running on port 8000"));
