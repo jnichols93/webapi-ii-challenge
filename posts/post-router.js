@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const Posts = require('./db.js')
+const Posts = require('../data/db.js')
 //imports
 
 

@@ -3,7 +3,7 @@ console.log("COME GET YO DATA!")
 
 const express = require('express')
 const db = require('./data/db')
-const postRouter = require('./data/post-router.js')
+const postRouter = require('./posts/post-router.js/index.js')
 //imports^
 
 const server = express()
