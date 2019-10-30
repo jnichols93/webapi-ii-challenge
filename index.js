@@ -1,4 +1,4 @@
-console.log("running!")
+console.log("COME GET YO DATA!")
 //sanity check valid
 
 const express = require('express')
