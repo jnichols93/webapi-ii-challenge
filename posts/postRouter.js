@@ -82,7 +82,7 @@ postRouter.delete("/:id", (req, res) => {
           .status(404)
           .json({ message: "The post with the specified ID does not exist." });
       } else {
-        res.status(204);
+        res.status(201);
       }
     })
     .catch(error => {
